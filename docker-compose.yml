@@ -1,0 +1,29 @@
+version: "3.3"
+
+services:
+  nats:
+    image: nats:2.6.1
+    container_name: nats
+    env_file:
+      - .env
+    ports:
+      - "${NATS_MAIN_PORT}:4222"   # Porta para conexões de cliente
+      - "${NATS_ROUTE_PORT}:6222"  # Porta para roteamento entre servidores NATS
+      - "${NATS_MONITOR_PORT}:8222" # Porta para o painel de monitoramento HTTP
+    restart: always
+
+  api:
+    image: gasiepgodoy/moleculer:api-v1.0.0
+    container_name: api-v1.0.0
+    ports:
+      - "3000:3000"   # Porta para conexões de cliente
+    restart: always
+    depends_on:
+      - nats
+
+  greeter:
+    image: gasiepgodoy/moleculer:greeter-v1.0.0
+    container_name: greeter-v1.0.0
+    restart: always
+    depends_on:
+      - nats
