@@ -1,6 +1,6 @@
-# Plug-and-Produce Architecture (pnpr)
+# Plug-and-Produce Architecture (PnPr)
 
-Description of the steps of each process of PNPR architecture.
+Description of the steps of each process of PnPr architecture.
 
 ## A. Plug Process
 ## 1. Model
