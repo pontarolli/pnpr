@@ -1,53 +1,33 @@
-# Docker Compose file to configure multiple services
 version: "3.3"
 
 services:
-  # NATS service configuration
   nats:
-    # Use the nats:2.6.1 image
     image: nats:2.6.1
-    # Set the container name to 'nats'
     container_name: nats
-    # Set the working directory inside the container to '/nats'
-    working_dir: /nats
-    # Load environment variables from the .env file
     env_file:
       - .env
-    # Expose ports for client connections, routing between NATS servers, and HTTP monitoring panel
     ports:
-      - "${NATS_MAIN_PORT}:4222"   # Port for client connections
-      - "${NATS_ROUTE_PORT}:6222"  # Port for routing between NATS servers
-      - "${NATS_MONITOR_PORT}:8222" # Port for HTTP monitoring panel
-    # Restart the container automatically if it stops
+      - "${HOST_NATS_MAIN_PORT}:${CONTAINER_NATS_MAIN_PORT}"
+      - "${HOST_NATS_ROUTE_PORT}:${CONTAINER_NATS_ROUTE_PORT}"
+      - "${HOST_NATS_MONITOR_PORT}:${CONTAINER_NATS_MONITOR_PORT}"
     restart: always
 
-  # API service configuration
   api:
-    # Use the gasiepgodoy/moleculer:api-v1.0.0 image
     image: gasiepgodoy/moleculer:api-v1.0.0
-    # Set the container name to 'api-v1.0.0'
-    container_name: api-v1.0.0
-    # Set the working directory inside the container to '/api'
-    working_dir: /api
-    # Expose port 3000 for client connections
+    container_name: api
+    env_file:
+      - .env
     ports:
-      - "3000:3000"   # Port for client connections
-    # Restart the container automatically if it stops
+      - "${HOST_API_MAIN_PORT}:${CONTAINER_API_MAIN_PORT}"
     restart: always
-    # Depend on the 'nats' service, ensuring it starts before this service
     depends_on:
       - nats
 
-  # Greeter service configuration
   greeter:
-    # Use the gasiepgodoy/moleculer:greeter-v1.0.0 image
     image: gasiepgodoy/moleculer:greeter-v1.0.0
-    # Set the container name to 'greeter-v1.0.0'
-    container_name: greeter-v1.0.0
-    # Set the working directory inside the container to '/greeter'
-    working_dir: /greeter
-    # Restart the container automatically if it stops
+    container_name: greeter
+    env_file:
+      - .env
     restart: always
-    # Depend on the 'nats' service, ensuring it starts before this service
     depends_on:
       - nats
