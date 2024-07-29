@@ -7,7 +7,7 @@ Description of the steps of each process of PnPr architecture.
 Focused on commissioning and discovering assets.
 
 ## 1. Model
-[aaspe](https://github.com/pontarolli/aaspe) kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+[aaspe](https://github.com/pontarolli/aaspe) 
 
 This repository outlines the standard naming conventions for files related to the Asset Administration Shell (AAS), applicable across different file formats. These conventions help in managing and automating processes within industrial systems, ensuring consistency and clarity in asset management.
 
