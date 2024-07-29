@@ -20,7 +20,7 @@ Here we define the naming convention for `.aasx` packages, which encapsulate Ass
 - Dancor_Centrifugal_Pump_CP4R_P2_1.aasx
 - Emerson_Pressure_Transmitter_2051_FIT116_1.aasx
 - Emerson_Pressure_Transmitter_2051_LIT125_1.aasx
-- Unesp_Service_Control_PID4_V001_1.aasx ??? Unesp_Service_PID_V4.0.0.aax ???
+- Unesp_Service_Control_PID4_V001_1.aasx
 - Wika_Electronic_Pressure_Switch_PSD4_PIT118_1.aasx
 - Wika_Electronic_Pressure_Switch_PSD4_PIT129_1.aasx
 
@@ -33,7 +33,7 @@ This section outlines the naming conventions for `.json` files which are often u
 - Dancor_Centrifugal_Pump_CP4R_P2_1.json
 - Emerson_Pressure_Transmitter_2051_FIT116_1.json
 - Emerson_Pressure_Transmitter_2051_LIT125_1.json
-- Unesp_Service_Control_PID4_V001_1.json ??? 
+- Unesp_Service_Control_PID4_V001_1.json
 - Wika_Electronic_Pressure_Switch_PSD4_PIT118_1.json
 - Wika_Electronic_Pressure_Switch_PSD4_PIT129_1.json
 
@@ -46,7 +46,7 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 - Opc.Ua.Dancor_Centrifugal_Pump_CP4R_P2_1.NodeSet2.xml
 - Opc.Ua.Emerson_Pressure_Transmitter_2051_FIT116_1.NodeSet2.xml
 - Opc.Ua.Emerson_Pressure_Transmitter_2051_LIT125_1.NodeSet2.xml
-- Opc.Ua.Unesp_Service_Control_PID4_1.NodeSet2.xml ???
+- Opc.Ua.Unesp_Service_Control_PID4_V001_1.NodeSet2.xml
 - Opc.Ua.Wika_Electronic_Pressure_Switch_PSD4_PIT118_1.NodeSet2.xml
 - Opc.Ua.Wika_Electronic_Pressure_Switch_PSD4_PIT129_1.NodeSet2.xml
 
@@ -57,7 +57,7 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 - Dancor_Centrifugal_Pump_CP4R_P2_1
 - Emerson_Pressure_Transmitter_2051_FIT116_1
 - Emerson_Pressure_Transmitter_2051_LIT125_1
-- Unesp_Service_Control_PID4_V001_1 ???
+- Unesp_Service_Control_PID4_V001_1
 - Wika_Electronic_Pressure_Switch_PSD4_PIT118_1
 - Wika_Electronic_Pressure_Switch_PSD4_PIT129_1
 
@@ -68,7 +68,7 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 - Dancor_Centrifugal_Pump_CP4R_P2
 - Emerson_Pressure_Transmitter_2051_FIT116
 - Emerson_Pressure_Transmitter_2051_LIT125
-- Unesp_Service_Control_PID4_V001 ???
+- Unesp_Service_Control_PID4_V001
 - Wika_Electronic_Pressure_Switch_PSD4_PIT118
 - Wika_Electronic_Pressure_Switch_PSD4_PIT129
 
@@ -88,7 +88,7 @@ For microservices and other related assets, the naming convention uses lowercase
 - p2
 - fit116
 - lit125
-- control ??? pid ???
+- control
 - pit118
 - pit129
 
@@ -99,7 +99,7 @@ For microservices and other related assets, the naming convention uses lowercase
 - p2.service.js
 - fit116.service.js
 - lit125.service.js
-- control.service.js ??? pid.service.js ???
+- control.service.js
 - pit118.service.js
 - pit129.service.js
 
@@ -110,7 +110,7 @@ For microservices and other related assets, the naming convention uses lowercase
 - p2.aas
 - fit116.aas
 - lit125.aas
-- control.aas (v3) < control.pidplus (v2) ??? pid.aas ??? pid.control ???
+- control.aas & control.pidplus
 - pit118.aas
 - pit129.aas
 
@@ -121,7 +121,7 @@ For microservices and other related assets, the naming convention uses lowercase
 - gasiepgody/moleculer:p2-v1.0.0
 - gasiepgody/moleculer:fit116-v1.0.0
 - gasiepgody/moleculer:lit125-v1.0.0
-- gasiepgody/moleculer:control-v1.0.0 ??? pid-v1.0.0 ???
+- gasiepgody/moleculer:control-v1.0.0
 - gasiepgody/moleculer:pit118-v1.0.0
 - gasiepgody/moleculer:pit129-v1.0.0  
 
@@ -136,7 +136,7 @@ It would only be possible to do the standard way, if they were public repository
 - p2-v1.0.0
 - fit116-v1.0.0
 - lit125-v1.0.0
-- control-v1.0.0 ??? pid-v1.0.0 ???
+- control-v1.0.0
 - pit118-v1.0.0
 - pit129-v1.0.0
 
