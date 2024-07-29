@@ -114,7 +114,7 @@ For microservices and other related assets, the naming convention uses lowercase
 - pit118.aas
 - pit129.aas
 
-**Standarization for docker images names**
+**Standarization for docker images names and docker hub repo**
 - *gasiepgody/moleculer:P&ID-v1.0.0* (This version is the same as the tag of Github)
 - gasiepgody/moleculer:lv122-v1.0.0
 - gasiepgody/moleculer:p1-v1.0.0
@@ -128,6 +128,18 @@ For microservices and other related assets, the naming convention uses lowercase
 Note: The version of these images was done this way, as we can only have a private repository in the free version of Docker Hub.
 It would only be possible to do the standard way, if they were public repository or pay the private account.Where the codes would be like this> "gasiepgodoy/P&ID:1.0.0"
 
+**Container Stack Standardization**
+- *P&ID*
+- lv122
+- p1
+- p2
+- fit116
+- lit125
+- control
+- pit118
+- pit129
+
+Note: When the repository clone is made in Github, keep the same name as the folder, because as the "stack" name will be up with the same name as the replacement.
 
 **Standardization for the name of container**
 - *P&ID-v1.0.0* (This version is the same as the tag of Github)
@@ -140,6 +152,7 @@ It would only be possible to do the standard way, if they were public repository
 - pit118-v1.0.0
 - pit129-v1.0.0
 
+Note: The version was used in the name, as you can not create two containers with the same name if you want to test two distinct verses of the same asset for example.
 
 
 
