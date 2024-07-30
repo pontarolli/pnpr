@@ -16,9 +16,9 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 | **Type**     | ** AAS File**            | **AAS idShort**  | **Asset idShort** |
 | ------------ | ------------------------ | ---------------- | ----------------- |
 | **Template** | p&id-service.`extension` | aas-p&id-service | p&id-service      |
-| **Sensors**  | fit116-daq.json          | aas-fit116-daq   | fit116-daq        |
+| **Sensors**  | fit116-daq.aasx          | aas-fit116-daq   | fit116-daq        |
 |              | lit125-daq.json          | aas-lit125-daq   | lit125-daq        |
-|              | pit118-daq.json          | aas-pit118-daq   | pit118-daq        |
+|              | pit118-daq.xml           | aas-pit118-daq   | pit118-daq        |
 |              | pit129-daq.json          | aas-pit129-daq   | pit129-daq        |
 | **Controls** | fic116-pid4.json         | aas-fic116-pid4  | fic116-pid4       |
 |              | lic125-pid4.json         | aas-lic125-pid4  | lic125-pid4       |
