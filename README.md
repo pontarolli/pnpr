@@ -11,14 +11,14 @@ Focused on commissioning and discovering assets.
 Standardization of the files of the Asset Administration Shell exported using the editor AAS Package Explorer. Here we define the naming convention for `.aasx` packages, which encapsulate Asset Administration Shell data. This format is particularly used for exchanging data between systems in a secure and standardized manner. AAS type 1 interactions (Passive) for example via email or AAS type 2 interactions (Reactive) with standardized API (aasx-server). The naming conventions for `.json` files which are often used for AAS type 3 interactions (Proactive) for example exchanging messages between assets. 
 The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Proactive) for example exchanging messages between assets.
 
-### Naming Examples
+### Asset Administration Shell (AAS) - Standardization of names
 
-| **Type**     | **AAS file**             | **AAS idShort**  | **Asset idShort** |
+| **Type**     | ** AAS File**            | **AAS idShort**  | **Asset idShort** |
 | ------------ | ------------------------ | ---------------- | ----------------- |
 | **Template** | p&id-service.`extension` | aas-p&id-service | p&id-service      |
-| **Sensors**  | fit116-daq.aasx          | aas-fit116-daq   | fit116-daq        |
+| **Sensors**  | fit116-daq.json          | aas-fit116-daq   | fit116-daq        |
 |              | lit125-daq.json          | aas-lit125-daq   | lit125-daq        |
-|              | pit118-daq.xml           | aas-pit118-daq   | pit118-daq        |
+|              | pit118-daq.json          | aas-pit118-daq   | pit118-daq        |
 |              | pit129-daq.json          | aas-pit129-daq   | pit129-daq        |
 | **Controls** | fic116-pid4.json         | aas-fic116-pid4  | fic116-pid4       |
 |              | lic125-pid4.json         | aas-lic125-pid4  | lic125-pid4       |
@@ -36,33 +36,27 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 
 ## 3. Servitize
 
-Standardization for GitHub, Microservices file and actions related with assets. For microservices and other related assets, the naming convention uses lowercase and hyphens to separate the elements, enhancing readability and manageability in software development. 
+### Microservices (μS) - Standardization of names
 
-### Naming Examples
-
-| **Type**     | **GitHub**   | **Microservice** | **Action**          |
-| ------------ | ------------ | ---------------- | ------------------- |
-| **Template** | p&id-service | p&id-service.js  | p&id-service.action |
-| **Sensors**  | fit116-daq   | fit116-daq.js    | fit116-daq.aas      |
-|              | lit125-daq   | lit125-daq.js    | lit125-daq.riin     |
-|              | pit118-daq   | pit118-daq.js    | pit118-daq.ruout    |
-|              | pit129-daq   | pit129-daq.js    | pit129-daq.wuout    |
-| **Controls** | fic116-pid4  | fic116-pid4.js   | fic116-pid4.control |
-|              | lic125-pid4  | lic125-pid4.js   | lic125-pid4.control |
-|              | pic118-pid4  | pic118-pid4.js   | pic118-pid4.aas     |
-|              | pic129-pid4  | pic129-pid4.js   | pic129-pid4.aas     |
-| **Actuator** | lv122-daq    | lv122-daq.js     | lv122-daq.aas       |
-|              | p1-daq       | p1-daq.js        | p1-daq.riin         |
-|              | p2-daq       | p2-daq.js        | p2-daq.wuout        |
-
-
+| **Type**     | **GitHub**   | **μS File**     | **μS Action**       |
+| ------------ | ------------ | --------------- | ------------------- |
+| **Template** | p&id-service | p&id-service.js | p&id-service.action |
+| **Sensors**  | fit116-daq   | fit116-daq.js   | fit116-daq.aas      |
+|              | lit125-daq   | lit125-daq.js   | lit125-daq.aas      |
+|              | pit118-daq   | pit118-daq.js   | pit118-daq.aas      |
+|              | pit129-daq   | pit129-daq.js   | pit129-daq.aas      |
+| **Controls** | fic116-pid4  | fic116-pid4.js  | fic116-pid4.aas     |
+|              | lic125-pid4  | lic125-pid4.js  | lic125-pid4.aas     |
+|              | pic118-pid4  | pic118-pid4.js  | pic118-pid4.aas     |
+|              | pic129-pid4  | pic129-pid4.js  | pic129-pid4.aas     |
+| **Actuator** | lv122-daq    | lv122-daq.js    | lv122-daq.aas       |
+|              | p1-daq       | p1-daq.js       | p1-daq.aas          |
+|              | p2-daq       | p2-daq.js       | p2-daq.aas          |
 
 
 ## 4. Install
 
-Standarization for docker images names and containers
-
-### Naming Examples
+### Docker - Standardization of names
 
 | **Type**     | **DockerHub images**                       | **Container name**    |
 | ------------ | ------------------------------------------ | --------------------- |
