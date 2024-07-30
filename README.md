@@ -6,71 +6,40 @@ Description of the steps of each process of PnPr architecture.
 
 Focused on commissioning and discovering assets.
 
-## 1. Model
-[aaspe](https://github.com/pontarolli/aaspe) 
+## 1. Model 
 
 This repository outlines the standard naming conventions for files related to the Asset Administration Shell (AAS), applicable across different file formats. These conventions help in managing and automating processes within industrial systems, ensuring consistency and clarity in asset management.
 
-## Standardization for Asset Administration Shell file names ( Package *.aasx)
-Here we define the naming convention for `.aasx` packages, which encapsulate Asset Administration Shell data. This format is particularly used for exchanging data between systems in a secure and standardized manner. AAS type 1 interactions (Passive) for example via email or AAS type 2 interactions (Reactive) with standardized API (aasx-server).
-
-- *Manufacturer_Description_Of_AAS_P&ID_Number_of_AAS.aasx* 
-- BuschJost_Motor_Actuated_Proportional_Valve_82882009650_LV122_1.aasx
-- Dancor_Centrifugal_Pump_CP4R_P1_1.aasx
-- Dancor_Centrifugal_Pump_CP4R_P2_1.aasx
-- Emerson_Pressure_Transmitter_2051_FIT116_1.aasx
-- Emerson_Pressure_Transmitter_2051_LIT125_1.aasx
-- Unesp_Service_Control_PID4_V001_1.aasx
-- Wika_Electronic_Pressure_Switch_PSD4_PIT118_1.aasx
-- Wika_Electronic_Pressure_Switch_PSD4_PIT129_1.aasx
-
-## Standardization for Asset Administration Shell file names (JSON *.json)
-This section outlines the naming conventions for `.json` files which are often used for AAS type 3 interactions (Proactive) for example exchanging messages between assets.
-
-- *Manufacturer_Description_Of_AAS_P&ID_Number_of_AAS.json*
-- BuschJost_Motor_Actuated_Proportional_Valve_82882009650_LV122_1.json
-- Dancor_Centrifugal_Pump_CP4R_P1_1.json
-- Dancor_Centrifugal_Pump_CP4R_P2_1.json
-- Emerson_Pressure_Transmitter_2051_FIT116_1.json
-- Emerson_Pressure_Transmitter_2051_LIT125_1.json
-- Unesp_Service_Control_PID4_V001_1.json
-- Wika_Electronic_Pressure_Switch_PSD4_PIT118_1.json
-- Wika_Electronic_Pressure_Switch_PSD4_PIT129_1.json
-
-## Standardization for Asset Administration Shell file names (OPC UA *.xml)
+### Standardization of the files of the Asset Administration Shell exported using the editor [AAS Package Explorer](https://github.com/pontarolli/aaspe) 
+Here we define the naming convention for `.aasx` packages, which encapsulate Asset Administration Shell data. This format is particularly used for exchanging data between systems in a secure and standardized manner. AAS type 1 interactions (Passive) for example via email or AAS type 2 interactions (Reactive) with standardized API (aasx-server). 
+The naming conventions for `.json` files which are often used for AAS type 3 interactions (Proactive) for example exchanging messages between assets. 
 The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Proactive) for example exchanging messages between assets.
 
-- *Opc.Ua.Manufacturer_Description_Of_AAS_P&ID_Number_of_AAS.NodeSet2.xml*
-- Opc.Ua.BuschJost_Motor_Actuated_Proportional_Valve_82882009650_LV122_1.NodeSet2.xml
-- Opc.Ua.Dancor_Centrifugal_Pump_CP4R_P1_1.NodeSet2.xml
-- Opc.Ua.Dancor_Centrifugal_Pump_CP4R_P2_1.NodeSet2.xml
-- Opc.Ua.Emerson_Pressure_Transmitter_2051_FIT116_1.NodeSet2.xml
-- Opc.Ua.Emerson_Pressure_Transmitter_2051_LIT125_1.NodeSet2.xml
-- Opc.Ua.Unesp_Service_Control_PID4_V001_1.NodeSet2.xml
-- Opc.Ua.Wika_Electronic_Pressure_Switch_PSD4_PIT118_1.NodeSet2.xml
-- Opc.Ua.Wika_Electronic_Pressure_Switch_PSD4_PIT129_1.NodeSet2.xml
+### Generic Template
+- p&id-service.`extension`
+- p&id-service.aasx (AAS Type 1 and 2)
+- p&id-service.json (AAS Type 3)
+- p&id-service.xml  (AAS Type 3)
+  
+- aas-p&id-service (AssetAdministrationShell idShort)
+- p&id-service     (Asset idShort)
+  
+### File Naming Examples
 
-## Standardization for AssetAdministrationShell idShort:
-- *Manufacturer_Description_Of_AAS_P&ID_Number_of_AAS_Increasing_Number*
-- BuschJost_Motor_Actuated_Proportional_Valve_82882009650_LV122_1
-- Dancor_Centrifugal_Pump_CP4R_P1_1
-- Dancor_Centrifugal_Pump_CP4R_P2_1
-- Emerson_Pressure_Transmitter_2051_FIT116_1
-- Emerson_Pressure_Transmitter_2051_LIT125_1
-- Unesp_Service_Control_PID4_V001_1
-- Wika_Electronic_Pressure_Switch_PSD4_PIT118_1
-- Wika_Electronic_Pressure_Switch_PSD4_PIT129_1
+| **Type**     | **file**         | **AssetAdministrationShell** | **Asset**   |
+| ------------ | ---------------- | ---------------------------- | ----------- |
+| **Sensors**  | fit116-daq.aasx  | aas-fit116-daq               | fit116-daq  |
+|              | lit125-daq.json  | aas-lit125-daq               | lit125-daq  |
+|              | pit118-daq.xml   | aas-pit118-daq               | pit118-daq  |
+|              | pit129-daq.json  | aas-pit129-daq               | pit129-daq  |
+| **Controls** | fic116-pid4.json | aas-fic116-pid4              | fic116-pid4 |
+|              | lic125-pid4.json | aas-lic125-pid4              | lic125-pid4 |
+|              | pic118-pid4.json | aas-pic118-pid4              | pic118-pid4 |
+|              | pic129-pid4.json | aas-pic129-pid4              | pic129-pid4 |
+| **Actuator** | lv122-daq.json   | aas-lv122-daq                | lv122-daq   |
+|              | p1-daq.json      | aas-p1-daq                   | p1-daq      |
+|              | p2-daq.json      | aas-p2-daq                   | p2-daq      |
 
-## Standardization for Assets idShort:
-- *Manufacturer_Description_Of_AAS_P&ID_Number_of_AAS*
-- BuschJost_Motor_Actuated_Proportional_Valve_82882009650_LV122
-- Dancor_Centrifugal_Pump_CP4R_P1
-- Dancor_Centrifugal_Pump_CP4R_P2
-- Emerson_Pressure_Transmitter_2051_FIT116
-- Emerson_Pressure_Transmitter_2051_LIT125
-- Unesp_Service_Control_PID4_V001
-- Wika_Electronic_Pressure_Switch_PSD4_PIT118
-- Wika_Electronic_Pressure_Switch_PSD4_PIT129
 
 ## 2. Aggregate
 [aasx-server](https://github.com/pontarolli/aasx-server)
@@ -78,66 +47,57 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 
 ## 3. Servitize
 
-## Standardization for Folders, GitHub, Microservices names and file names related with assets
+### Standardization for Folders, GitHub, Microservices names and file names related with assets
 For microservices and other related assets, the naming convention uses lowercase and hyphens to separate the elements, enhancing readability and manageability in software development. 
 
-**Standarization for folder project, GitHub repository (versions with tags) and microservices names**
-- *P&ID*
-- lv122
-- p1
-- p2
-- fit116
-- lit125
-- control
-- pit118
-- pit129
+### Standarization for folder project or GitHub repository (versions with tags) and microservices names
 
-**Standarization for microservices files names (*.js)**
-- *P&ID.service.js*  
-- lv122.service.js
-- p1.service.js
-- p2.service.js
-- fit116.service.js
-- lit125.service.js
-- control.service.js
-- pit118.service.js
-- pit129.service.js
+### Generic Template
+- p&id-service (Repository)
+- p&id-service.js (Microservice file name)
+- p&id-service.action (Microservice call action)
 
-**Standardization of the name of microservices actions**
-- *service.action*
-- lv122.aas
-- p1.aas
-- p2.aas
-- fit116.aas
-- lit125.aas
-- control.aas & control.pidplus
-- pit118.aas
-- pit129.aas
+| **Type**     | **GitHub**  | **Microservice** | **Action**          |
+| ------------ | ----------- | ---------------- | ------------------- |
+| **Sensors**  | fit116-daq  | fit116-daq.js    | fit116-daq.aas      |
+|              | lit125-daq  | lit125-daq.js    | lit125-daq.riin     |
+|              | pit118-daq  | pit118-daq.js    | pit118-daq.ruout    |
+|              | pit129-daq  | pit129-daq.js    | pit129-daq.wuout    |
+| **Controls** | fic116-pid4 | fic116-pid4.js   | fic116-pid4.control |
+|              | lic125-pid4 | lic125-pid4.js   | lic125-pid4.control |
+|              | pic118-pid4 | pic118-pid4.js   | pic118-pid4.aas     |
+|              | pic129-pid4 | pic129-pid4.js   | pic129-pid4.aas     |
+| **Actuator** | lv122-daq   | lv122-daq.js     | lv122-daq.aas       |
+|              | p1-daq      | p1-daq.js        | p1-daq.riin         |
+|              | p2-daq      | p2-daq.js        | p2-daq.wuou         |
+
+
+
 
 **Standarization for docker images names and docker hub repo**
-- *gasiepgody/moleculer:P&ID-v1.0.0* (This version is the same as the tag of Github)
-- gasiepgody/moleculer:lv122-v1.0.0
-- gasiepgody/moleculer:p1-v1.0.0
-- gasiepgody/moleculer:p2-v1.0.0
-- gasiepgody/moleculer:fit116-v1.0.0
-- gasiepgody/moleculer:lit125-v1.0.0
-- gasiepgody/moleculer:control-v1.0.0
-- gasiepgody/moleculer:pit118-v1.0.0
-- gasiepgody/moleculer:pit129-v1.0.0  
+
+| **Type**     | **DockerHub images**                       | **Container**         |
+| ------------ | ------------------------------------------ | --------------------- |
+| **Template** | gasiepgody/moleculer:p&id-service-v1.0.0   | p&id-service-v1.0.0   |
+| **Sensors**  | gasiepgody/moleculer:fit116-daq-v1.0.0     | fit116-daq-v1.0.0     |
+|              | gasiepgody/moleculer:lit125-daq-v1.0.0     | lit125-daq-v1.0.0     |
+|              | gasiepgody/moleculer:pit118-daq-v1.0.0     | pit118-daq-v1.0.0     |
+|              | gasiepgody/moleculer:pit129-daq-v1.0.0     | pit129-daq-v1.0.0     |
+| **Controls** | gasiepgody/moleculer:fic116-control-v1.0.0 | fic116-control-v1.0.0 |
+|              | gasiepgody/moleculer:lic125-control-v1.0.0 | lic125-control-v1.0.0 |
+|              | gasiepgody/moleculer:pic118-control-v1.0.0 | pic118-control-v1.0.0 |
+|              | gasiepgody/moleculer:pic129-control-v1.0.0 | pic129-control-v1.0.0 |
+| **Actuator** | gasiepgody/moleculer:lv122-daq-v1.0.0      | lv122-daq-v1.0.0      |
+|              | gasiepgody/moleculer:p1-daq-v1.0.0         | p1-daq-v1.0.0         |
+|              | gasiepgody/moleculer:p2-daq-v1.0.0         | p2-daq-v1.0.0         |
+
+
+
+
+
 
 Note: The version of these images was done this way, as we can only have a private repository in the free version of Docker Hub.
 It would only be possible to do the standard way, if they were public repository or pay the private account.Where the codes would be like this> "gasiepgodoy/P&ID:1.0.0"
-
-**Container Stack Standardization**
-- *P&ID*
-- lv122
-- p1
-- p2
-- fit116
-- lit125
-- control
-- pit118
-- pit129
 
 Note: When the repository clone is made in Github, keep the same name as the folder, because as the "stack" name will be up with the same name as the replacement.
 
