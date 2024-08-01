@@ -12,6 +12,7 @@ Standardization of the files of the Asset Administration Shell exported using th
 The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Proactive) for example exchanging messages between assets.
 
 ### Asset Administration Shell (AAS) - Standardization of names
+Message from AAS Package Explorer: The idShort shall only feature letters, digits, underscore ('_'); starting mandatory with a letter.
 
 | **Type**     | ** AAS File**            | **AAS and Asset idShort** |
 | ------------ | ------------------------ | ------------------------- |
@@ -29,7 +30,7 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 |              | p2_daq.json              | p2_daq                    |
 
 
-* The idShort shall only feature letters, digits, underscore ('_'); starting mandatory with a letter.
+
 
 ## 2. Aggregate
 [aasx-server](https://github.com/pontarolli/aasx-server)
@@ -37,42 +38,44 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 
 ## 3. Servitize
 
+
 ### Microservices (μS) - Standardization of names
 
-| **Type**     | **GitHub**   | **μS File**     | **μS Action**       |
-| ------------ | ------------ | --------------- | ------------------- |
-| **Template** | p&id-service | p&id-service.js | p&id-service.action |
-| **Sensors**  | fit116-daq   | fit116-daq.js   | fit116-daq.aas      |
-|              | lit125-daq   | lit125-daq.js   | lit125-daq.aas      |
-|              | pit118-daq   | pit118-daq.js   | pit118-daq.aas      |
-|              | pit129-daq   | pit129-daq.js   | pit129-daq.aas      |
-| **Controls** | fic116-pid4  | fic116-pid4.js  | fic116-pid4.aas     |
-|              | lic125-pid4  | lic125-pid4.js  | lic125-pid4.aas     |
-|              | pic118-pid4  | pic118-pid4.js  | pic118-pid4.aas     |
-|              | pic129-pid4  | pic129-pid4.js  | pic129-pid4.aas     |
-| **Actuator** | lv122-daq    | lv122-daq.js    | lv122-daq.aas       |
-|              | p1-daq       | p1-daq.js       | p1-daq.aas          |
-|              | p2-daq       | p2-daq.js       | p2-daq.aas          |
+| **Type**     | **GitHub Repo.** | **μS Action**       |
+| ------------ | ---------------- | ------------------- |
+| **Template** | p&id_service     | p&id_service.action |
+| **Sensors**  | fit116_daq       | fit116_daq.aas      |
+|              | lit125_daq       | lit125_daq.aas      |
+|              | pit118_daq       | pit118_daq.aas      |
+|              | pit129_daq       | pit129_daq.aas      |
+| **Controls** | fic116_pid4      | fic116_pid4.aas     |
+|              | lic125_pid4      | lic125_pid4.aas     |
+|              | pic118_pid4      | pic118_pid4.aas     |
+|              | pic129_pid4      | pic129_pid4.aas     |
+| **Actuator** | lv122_daq        | lv122_daq.aas       |
+|              | p1_daq           | p1_daq.aas          |
+|              | p2_daq           | p2_daq.aas          |
 
 
 ## 4. Install
+
 
 ### Docker - Standardization of names
 
 | **Type**     | **DockerHub images**                       | **Container name**    |
 | ------------ | ------------------------------------------ | --------------------- |
-| **Template** | gasiepgody/moleculer:p&id-service-v1.0.0   | p&id-service-v1.0.0   |
-| **Sensors**  | gasiepgody/moleculer:fit116-daq-v1.0.0     | fit116-daq-v1.0.0     |
-|              | gasiepgody/moleculer:lit125-daq-v1.0.0     | lit125-daq-v1.0.0     |
-|              | gasiepgody/moleculer:pit118-daq-v1.0.0     | pit118-daq-v1.0.0     |
-|              | gasiepgody/moleculer:pit129-daq-v1.0.0     | pit129-daq-v1.0.0     |
-| **Controls** | gasiepgody/moleculer:fic116-control-v1.0.0 | fic116-control-v1.0.0 |
-|              | gasiepgody/moleculer:lic125-control-v1.0.0 | lic125-control-v1.0.0 |
-|              | gasiepgody/moleculer:pic118-control-v1.0.0 | pic118-control-v1.0.0 |
-|              | gasiepgody/moleculer:pic129-control-v1.0.0 | pic129-control-v1.0.0 |
-| **Actuator** | gasiepgody/moleculer:lv122-daq-v1.0.0      | lv122-daq-v1.0.0      |
-|              | gasiepgody/moleculer:p1-daq-v1.0.0         | p1-daq-v1.0.0         |
-|              | gasiepgody/moleculer:p2-daq-v1.0.0         | p2-daq-v1.0.0         |
+| **Template** | gasiepgody/moleculer:p&id_service_v1.0.0   | p&id_service_v1.0.0   |
+| **Sensors**  | gasiepgody/moleculer:fit116_daq_v1.0.0     | fit116_daq_v1.0.0     |
+|              | gasiepgody/moleculer:lit125_daq_v1.0.0     | lit125_daq_v1.0.0     |
+|              | gasiepgody/moleculer:pit118_daq_v1.0.0     | pit118_daq_v1.0.0     |
+|              | gasiepgody/moleculer:pit129_daq_v1.0.0     | pit129_daq_v1.0.0     |
+| **Controls** | gasiepgody/moleculer:fic116_control_v1.0.0 | fic116_control_v1.0.0 |
+|              | gasiepgody/moleculer:lic125_control_v1.0.0 | lic125_control_v1.0.0 |
+|              | gasiepgody/moleculer:pic118_control_v1.0.0 | pic118_control_v1.0.0 |
+|              | gasiepgody/moleculer:pic129_control_v1.0.0 | pic129_control_v1.0.0 |
+| **Actuator** | gasiepgody/moleculer:lv122_daq_v1.0.0      | lv122_daq_v1.0.0      |
+|              | gasiepgody/moleculer:p1_daq_v1.0.0         | p1_daq_v1.0.0         |
+|              | gasiepgody/moleculer:p2_daq_v1.0.0         | p2_daq_v1.0.0         |
 
 ## 5. Discover
 
