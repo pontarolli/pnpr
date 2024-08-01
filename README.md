@@ -13,22 +13,23 @@ The `.xml` format is used in OPC UA environments to AAS type 3 interactions (Pro
 
 ### Asset Administration Shell (AAS) - Standardization of names
 
-| **Type**     | ** AAS File**            | **AAS idShort**  | **Asset idShort** |
-| ------------ | ------------------------ | ---------------- | ----------------- |
-| **Template** | p&id-service.`extension` | aas-p&id-service | p&id-service      |
-| **Sensors**  | fit116-daq.aasx          | aas-fit116-daq   | fit116-daq        |
-|              | lit125-daq.json          | aas-lit125-daq   | lit125-daq        |
-|              | pit118-daq.xml           | aas-pit118-daq   | pit118-daq        |
-|              | pit129-daq.json          | aas-pit129-daq   | pit129-daq        |
-| **Controls** | fic116-pid4.json         | aas-fic116-pid4  | fic116-pid4       |
-|              | lic125-pid4.json         | aas-lic125-pid4  | lic125-pid4       |
-|              | pic118-pid4.json         | aas-pic118-pid4  | pic118-pid4       |
-|              | pic129-pid4.json         | aas-pic129-pid4  | pic129-pid4       |
-| **Actuator** | lv122-daq.json           | aas-lv122-daq    | lv122-daq         |
-|              | p1-daq.json              | aas-p1-daq       | p1-daq            |
-|              | p2-daq.json              | aas-p2-daq       | p2-daq            |
+| **Type**     | ** AAS File**            | **AAS and Asset idShort** |
+| ------------ | ------------------------ | ------------------------- |
+| **Template** | p&id_service.`extension` | p&id_service              |
+| **Sensors**  | fit116_daq.aasx          | fit116_daq                |
+|              | lit125_daq.json          | lit125_daq                |
+|              | pit118_daq.xml           | pit118_daq                |
+|              | pit129_daq.json          | pit129_daq                |
+| **Controls** | fic116_pid4.json         | fic116_pid4               |
+|              | lic125_pid4.json         | lic125_pid4               |
+|              | pic118_pid4.json         | pic118_pid4               |
+|              | pic129_pid4.json         | pic129_pid4               |
+| **Actuator** | lv122_daq.json           | lv122_daq                 |
+|              | p1_daq.json              | p1_daq                    |
+|              | p2_daq.json              | p2_daq                    |
 
 
+* The idShort shall only feature letters, digits, underscore ('_'); starting mandatory with a letter.
 
 ## 2. Aggregate
 [aasx-server](https://github.com/pontarolli/aasx-server)
