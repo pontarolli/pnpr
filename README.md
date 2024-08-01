@@ -38,24 +38,25 @@ Message from AAS Package Explorer: The idShort shall only feature letters, digit
 
 ## 3. Servitize
 
-
 ### Microservices (μS) - Standardization of names
 
-| **Type**     | **μS Repo. and Name** | **μS Action**       |
-| ------------ | --------------------- | ------------------- |
-| **Template** | p&id_service          | p&id_service.action |
-| **Sensors**  | fit116_daq            | fit116_daq.aas      |
-|              | lit125_daq            | lit125_daq.aas      |
-|              | pit118_daq            | pit118_daq.aas      |
-|              | pit129_daq            | pit129_daq.aas      |
-| **Controls** | fic116_pid4           | fic116_pid4.aas     |
-|              | lic125_pid4           | lic125_pid4.aas     |
-|              | pic118_pid4           | pic118_pid4.aas     |
-|              | pic129_pid4           | pic129_pid4.aas     |
-| **Actuator** | lv122_daq             | lv122_daq.aas       |
-|              | p1_daq                | p1_daq.aas          |
-|              | p2_daq                | p2_daq.aas          |
 
+| **Type**     | **μS Name**  | **μS Action**       |
+| ------------ | ------------ | ------------------- |
+| **Template** | p&id_service | p&id_service.action |
+| **Sensors**  | fit116_daq   | fit116_daq.aas      |
+|              | lit125_daq   | lit125_daq.aas      |
+|              | pit118_daq   | pit118_daq.aas      |
+|              | pit129_daq   | pit129_daq.aas      |
+| **Controls** | fic116_pid4  | fic116_pid4.aas     |
+|              | lic125_pid4  | lic125_pid4.aas     |
+|              | pic118_pid4  | pic118_pid4.aas     |
+|              | pic129_pid4  | pic129_pid4.aas     |
+| **Actuator** | lv122_daq    | lv122_daq.aas       |
+|              | p1_daq       | p1_daq.aas          |
+|              | p2_daq       | p2_daq.aas          |
+
+Services have many more actions than these, and should be consulted individually.
 
 ## 4. Install
 
