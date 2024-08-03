@@ -48,7 +48,7 @@ Message from AAS Package Explorer: The idShort shall only feature letters, digit
 |              | lit125_daq   | lit125_daq.aas      |
 |              | pit118_daq   | pit118_daq.aas      |
 |              | pit129_daq   | pit129_daq.aas      |
-| **Controls** | fic116_pid4  | fic116_pid4.aas     |
+| **Controls** | fic116_pid4  | fic116_pid4.control |
 |              | lic125_pid4  | lic125_pid4.aas     |
 |              | pic118_pid4  | pic118_pid4.aas     |
 |              | pic129_pid4  | pic129_pid4.aas     |
