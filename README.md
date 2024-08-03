@@ -65,18 +65,18 @@ Services have many more actions than these, and should be consulted individually
 
 | **Type**     | **DockerHub images**                     | **Container name**  |
 | ------------ | ---------------------------------------- | ------------------- |
-| **Template** | gasiepgody/moleculer:p&id_service_v1.0.0 | p&id_service_v1.0.0 |
-| **Sensors**  | gasiepgody/moleculer:fit116_daq_v1.0.0   | fit116_daq_v1.0.0   |
-|              | gasiepgody/moleculer:lit125_daq_v1.0.0   | lit125_daq_v1.0.0   |
-|              | gasiepgody/moleculer:pit118_daq_v1.0.0   | pit118_daq_v1.0.0   |
-|              | gasiepgody/moleculer:pit129_daq_v1.0.0   | pit129_daq_v1.0.0   |
-| **Controls** | gasiepgody/moleculer:fic116_pid4_v2.0.0  | fic116_pid4_v2.0.0  |
-|              | gasiepgody/moleculer:lic125_pid4_v2.0.0  | lic125_pid4_v2.0.0  |
-|              | gasiepgody/moleculer:pic118_pid4_v2.0.0  | pic118_pid4_v2.0.0  |
-|              | gasiepgody/moleculer:pic129_pid4_v2.0.0  | pic129_pid4_v2.0.0  |
-| **Actuator** | gasiepgody/moleculer:lv122_daq_v1.0.0    | lv122_daq_v1.0.0    |
-|              | gasiepgody/moleculer:p1_daq_v1.0.0       | p1_daq_v1.0.0       |
-|              | gasiepgody/moleculer:p2_daq_v1.0.0       | p2_daq_v1.0.0       |
+| **Template** | gasiepgody/moleculer:p&id_service_v1.0.0 | p&id_service        |
+| **Sensors**  | gasiepgody/moleculer:fit116_daq_v1.0.0   | fit116_daq          |
+|              | gasiepgody/moleculer:lit125_daq_v1.0.0   | lit125_daq          |
+|              | gasiepgody/moleculer:pit118_daq_v1.0.0   | pit118_daq          |
+|              | gasiepgody/moleculer:pit129_daq_v1.0.0   | pit129_daq          |
+| **Controls** | gasiepgody/moleculer:fic116_pid4_v2.0.0  | fic116_pid4         |
+|              | gasiepgody/moleculer:lic125_pid4_v2.0.0  | lic125_pid4         |
+|              | gasiepgody/moleculer:pic118_pid4_v2.0.0  | pic118_pid4         |
+|              | gasiepgody/moleculer:pic129_pid4_v2.0.0  | pic129_pid4         |
+| **Actuator** | gasiepgody/moleculer:lv122_daq_v1.0.0    | lv122_daq           |
+|              | gasiepgody/moleculer:p1_daq_v1.0.0       | p1_daq              |
+|              | gasiepgody/moleculer:p2_daq_v1.0.0       | p2_daq              |
 
 ## 5. Discover
 
