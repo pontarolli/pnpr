@@ -2,6 +2,11 @@
 
 Description of the steps of each process of PnPr architecture.
 
+# Deployment diagram
+
+![Deployment diagram](.\deployment-diagram\deployment-diagram.svg)
+
+
 # Plug Process
 
 Focused on commissioning and discovering assets.
