@@ -1,7 +1,10 @@
+# This compose executes and sets up all applications on a single device.If you want to run distributed in a distributed manner, just copy this compose, and comment on the parties you do not want, and perform it.
+
 version: "3.3"
 
 services:
 
+  # Status: pending
   # portainer:
   #   container_name: portainer
   #   image: portainer/portainer-ce:2.16.1
@@ -16,6 +19,7 @@ services:
   #   - ADMIN_USERNAME=pi
   #   - ADMIN_PASSWORD=raspberryportainer
 
+  # Status: resolved
   # portainer_edge_agent:
   #   image: portainer/agent:2.15.1
   #   container_name: portainer_edge_agent
@@ -32,6 +36,7 @@ services:
   #     - EDGE_KEY=aHR0cDovLzE5Mi4xNjguMS42OjkwMDB8MTkyLjE2OC4xLjY6ODAwMHxmOTo1ZTo0YTplOTo0YzplNzozNTo2NjowNTo2MTpjNzoxMDoxZDpmMjo0NDpmMXwyMg
   #     - EDGE_INSECURE_POOL=1
 
+  # Status: resolved
   # nats:
   #   image: nats:1.3.0
   #   container_name: nats
@@ -41,6 +46,7 @@ services:
   #     - "8222:8222"
   #   restart: always
 
+  # Status: resolved
   # api:
   #   image: gasiepgodoy/moleculer:api-v1.0.8
   #   container_name: api
@@ -53,22 +59,32 @@ services:
   #   depends_on:
   #     - nats
 
+  # Status: resolved
   # greeter:
   #   image: gasiepgodoy/moleculer:greeter-v1.0.8
   #   container_name: greeter
   #   restart: always
   #   environment:
-  #     - TRANSPORTER_URL=${TRANSPORTER_URL}
+  #     - TRANSPORTER_URL=nats://nats:4222
   #   depends_on:
   #     - nats
 
+  # Status: resolved
   # grafana:
+
+  # Status: resolved
   # influxdb:
 
+  # Status: resolved
   # node_red:
+
+  # Status: resolved
   # open_plc:
+
+  # Status: resolved
   # 4diac:
 
+  # Status: pending
   # aasx_server:
   #   container_name: aasx_server
   #   image: docker.io/adminshellio/aasx-server-blazor-for-demo-arm32:main
@@ -81,19 +97,64 @@ services:
   #     - ./aasxs:/AasxServerBlazor/aasxs
   #   command: --no-security --data-path /AasxServerBlazor/aasxs --external-blazor http://localhost
 
+  # Status: pending
   fit116_daq:
-  lit125_daq:
-  pit118_daq:
-  pit129_daq:
+    image: gasiepgodoy/moleculer:fit116_v1.0.3
+    container_name: fit116_daq
+    ports:
+      - "26116:26116"
+    environment:
+      - NAME=fit116_daq
+      - TRANSPORTER=nats://192.168.1.201:4222
+      - I2C_MEM_OPTO_IN_VAL=3
+      - I2C_MEM_U0_10_OUT_VAL1=4
+      - I2C_MEM_I4_20_OUT_VAL1=12
+      - I2C_MEM_OD_PWM1=20
+      - I2C_MEM_U0_10_IN_VAL1=28
+      - I2C_MEM_I4_20_IN_VAL1=44
+      - I2C_RTC_YEAR_ADD=70
+      - DEFAULT_HW_ADD=80
+      - I2C_MEM_DIAG_TEMPERATURE=114
+      - MILLISECONDS=150
+      - STACK=0
+      - CHANNEL=4
+      - NODE_NAMESPACE=3
+      - NODE_IDENTIFIER=504
+      - OPCUA_PORT=26116
+    restart: always
+    devices:
+      - /dev/i2c-1:/dev/i2c-1
+    mem_limit: 256m
+  # Status: pending
+  # lit125_daq:
 
-  fic116_pid4:
-  lic125_pid4:
-  pic118_pid4:
-  pic129_pid4:
+  # Status: pending
+  # pit118_daq:
 
-  lv122_daq:
-  p1_daq:
-  p2_daq:
+  # Status: pending
+  # pit129_daq:
 
-    # volumes:
-    #   portainer_agent_data:
+  # Status: pending
+  # fic116_pid4:
+
+  # Status: pending
+  # lic125_pid4:
+
+  # Status: pending
+  # pic118_pid4:
+
+  # Status: pending
+  # pic129_pid4:
+
+  # Status: pending
+  # lv122_daq:
+
+  # Status: pending
+  # p1_daq:
+
+  # Status: pending
+  # p2_daq:
+
+
+  # volumes:
+  #   portainer_agent_data:
