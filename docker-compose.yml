@@ -1,32 +1,99 @@
 version: "3.3"
 
 services:
-  nats:
-    image: nats:1.3.0
-    container_name: nats
-    ports:
-      - "4222:4222"   
-      - "6222:6222"  
-      - "8222:8222"
-    restart: always
 
-  api:
-    image: gasiepgodoy/moleculer:api-v1.0.8
-    container_name: api-v1.0.8
-    ports:
-      - "3000:3000"   # Porta para conexões de cliente
-    restart: always
-    environment:
-      - TRANSPORTER_URL=nats://nats:4222
-      - API_PORT=3000
-    depends_on:
-      - nats
+  # portainer:
+  #   container_name: portainer
+  #   image: portainer/portainer-ce:2.16.1
+  #   ports:
+  #     - "8000:8000"
+  #     - "9000:9000"
+  #   restart: always
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - ./data:/data
+  #   environment:
+  #   - ADMIN_USERNAME=${PORTAINER_ADMIN_USERNAME}
+  #   - ADMIN_PASSWORD=${PORTAINER_ADMIN_PASSWORD}
 
-  greeter:
-    image: gasiepgodoy/moleculer:greeter-v1.0.8
-    container_name: greeter-v1.0.8
-    restart: always
-    environment:
-      - TRANSPORTER_URL=nats://nats:4222
-    depends_on:
-      - nats
+  # portainer_edge_agent:
+  #   image: portainer/agent:2.15.1
+  #   container_name: portainer_edge_agent
+  #   restart: always
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - /var/lib/docker/volumes:/var/lib/docker/volumes
+  #     - /:/host
+  #     - portainer_agent_data:/data
+  #   environment:
+  #     - CAP_HOST_MANAGEMENT=1
+  #     - EDGE=1
+  #     - EDGE_ID=${EDGE_ID}
+  #     - EDGE_KEY=${EDGE_KEY}
+  #     - EDGE_INSECURE_POOL=1
+
+  # nats:
+  #   image: nats:1.3.0
+  #   container_name: nats
+  #   ports:
+  #     - "4222:4222"
+  #     - "6222:6222"
+  #     - "8222:8222"
+  #   restart: always
+
+  # api:
+  #   image: gasiepgodoy/moleculer:api-v1.0.8
+  #   container_name: api
+  #   ports:
+  #     - "${API_PORT}:${API_PORT}"
+  #   restart: always
+  #   environment:
+  #     - TRANSPORTER_URL=${TRANSPORTER_URL}
+  #     - API_PORT=${API_PORT}
+  #   depends_on:
+  #     - nats
+
+  # greeter:
+  #   image: gasiepgodoy/moleculer:greeter-v1.0.8
+  #   container_name: greeter
+  #   restart: always
+  #   environment:
+  #     - TRANSPORTER_URL=${TRANSPORTER_URL}
+  #   depends_on:
+  #     - nats
+
+  # grafana:
+  # influxdb:
+
+  # node_red:
+  # open_plc:
+  # 4diac:
+
+  # aasx_server:
+  #   container_name: aasx_server
+  #   image: docker.io/adminshellio/aasx-server-blazor-for-demo-arm32:main
+  #   restart: always
+  #   ports:
+  #     - 5001:5001
+  #   environment:
+  #     - Kestrel__Endpoints__Http__Url=http://*:5001
+  #   volumes:
+  #     - ./aasxs:/AasxServerBlazor/aasxs
+  #   command: --no-security --data-path /AasxServerBlazor/aasxs --external-blazor http://localhost
+
+  fit116_daq:
+  lit125_daq:
+  pit118_daq:
+  pit129_daq:
+
+  fic116_pid4:
+  lic125_pid4:
+  pic118_pid4:
+  pic129_pid4:
+
+  lv122_daq:
+  p1_daq:
+  p2_daq:
+
+    # volumes:
+    #   portainer_agent_data:
