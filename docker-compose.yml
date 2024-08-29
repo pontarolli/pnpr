@@ -213,31 +213,71 @@ services:
   #     - /dev/i2c-1:/dev/i2c-1
   #   mem_limit: 256m
 
-  # Status: pending
-  fic116_pid4:
-    image: gasiepgodoy/moleculer:fic116_pid4_v3.0.0
-    container_name: fic116_pid4
-    ports:
-      - "24116:24116"
-    environment:
-      - NAME=fic116_pid4
-      - TRANSPORTER=nats://192.168.1.201:4222
-      - MILLISECONDS=150
-      - NODE_NAMESPACE=3
-      - NODE_IDENTIFIER_PARAMMETERS=1477
-      - NODE_IDENTIFIER_PAYLOAD=1484
-      - OPCUA_PORT=24116
-    restart: always
-  # Status: pending
+  # Status: resolved
+  # fic116_pid4:
+  #   image: gasiepgodoy/moleculer:fic116_pid4_v3.0.0
+  #   container_name: fic116_pid4
+  #   ports:
+  #     - "24116:24116"
+  #   environment:
+  #     - NAME=fic116_pid4
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - MILLISECONDS=150
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER_PARAMMETERS=1477
+  #     - NODE_IDENTIFIER_PAYLOAD=1484
+  #     - OPCUA_PORT=24116
+  #   restart: always
+
+  # Status: resolved
   # lic125_pid4:
+  #   image: gasiepgodoy/moleculer:lic125_pid4_v3.0.0
+  #   container_name: lic125_pid4
+  #   ports:
+  #     - "24125:24125"
+  #   environment:
+  #     - NAME=lic125_pid4
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - MILLISECONDS=150
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER_PARAMMETERS=1477
+  #     - NODE_IDENTIFIER_PAYLOAD=1484
+  #     - OPCUA_PORT=24125
+  #   restart: always
 
-  # Status: pending
+  # Status: resolved
   # pic118_pid4:
+  #   image: gasiepgodoy/moleculer:pic118_pid4_v3.0.0
+  #   container_name: pic118_pid4
+  #   ports:
+  #     - "24118:24118"
+  #   environment:
+  #     - NAME=pic118_pid4
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - MILLISECONDS=150
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER_PARAMMETERS=1477
+  #     - NODE_IDENTIFIER_PAYLOAD=1484
+  #     - OPCUA_PORT=24118
+  #   restart: always
 
-  # Status: pending
+  # Status: resolved
   # pic129_pid4:
+  #   image: gasiepgodoy/moleculer:pic129_pid4_v3.0.0
+  #   container_name: pic129_pid4
+  #   ports:
+  #     - "24129:24129"
+  #   environment:
+  #     - NAME=pic129_pid4
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - MILLISECONDS=150
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER_PARAMMETERS=1477
+  #     - NODE_IDENTIFIER_PAYLOAD=1484
+  #     - OPCUA_PORT=24129
+  #   restart: always
 
-  # Status: pending
+  # Status: resolved
   # lv122_daq:
   #   image: gasiepgodoy/moleculer:lv122_daq_v1.0.3
   #   container_name: lv122_daq
@@ -266,7 +306,7 @@ services:
   #     - /dev/i2c-1:/dev/i2c-1
   #   mem_limit: 256m
 
-  # Status: pending
+  # Status: resolved
   # p1_daq:
   #   image: gasiepgodoy/moleculer:p1_daq_v1.0.3
   #   container_name: p1_daq
@@ -295,7 +335,7 @@ services:
   #     - /dev/i2c-1:/dev/i2c-1
   #   mem_limit: 256m
 
-  # Status: pending
+  # Status: resolved
   # p2_daq:
   #   image: gasiepgodoy/moleculer:p2_daq_v1.0.3
   #   container_name: p2_daq
