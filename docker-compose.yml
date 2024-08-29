@@ -45,7 +45,7 @@ services:
   #     - "6222:6222"
   #     - "8222:8222"
   #   restart: always
-
+  #
   # Status: resolved
   # api:
   #   image: gasiepgodoy/moleculer:api-v1.0.8
