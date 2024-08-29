@@ -212,9 +212,22 @@ services:
   #   devices:
   #     - /dev/i2c-1:/dev/i2c-1
   #   mem_limit: 256m
-  # Status: pending
-  # fic116_pid4:
 
+  # Status: pending
+  fic116_pid4:
+    image: gasiepgodoy/moleculer:fic116_pid4_v3.0.0
+    container_name: fic116_pid4
+    ports:
+      - "24116:24116"
+    environment:
+      - NAME=fic116_pid4
+      - TRANSPORTER=nats://192.168.1.201:4222
+      - MILLISECONDS=150
+      - NODE_NAMESPACE=3
+      - NODE_IDENTIFIER_PARAMMETERS=1477
+      - NODE_IDENTIFIER_PAYLOAD=1484
+      - OPCUA_PORT=24116
+    restart: always
   # Status: pending
   # lic125_pid4:
 
@@ -254,59 +267,59 @@ services:
   #   mem_limit: 256m
 
   # Status: pending
-  p1_daq:
-    image: gasiepgodoy/moleculer:p1_daq_v1.0.3
-    container_name: p1_daq
-    ports:
-      - "26001:26001"
-    environment:
-      - NAME=p1_daq
-      - TRANSPORTER=nats://192.168.1.201:4222
-      - I2C_MEM_OPTO_IN_VAL=3
-      - I2C_MEM_U0_10_OUT_VAL1=4
-      - I2C_MEM_I4_20_OUT_VAL1=12
-      - I2C_MEM_OD_PWM1=20
-      - I2C_MEM_U0_10_IN_VAL1=28
-      - I2C_MEM_I4_20_IN_VAL1=44
-      - I2C_RTC_YEAR_ADD=70
-      - DEFAULT_HW_ADD=80
-      - I2C_MEM_DIAG_TEMPERATURE=114
-      - MILLISECONDS=150
-      - STACK=0
-      - CHANNEL=1
-      - NODE_NAMESPACE=3
-      - NODE_IDENTIFIER=458
-      - OPCUA_PORT=26001
-    restart: always
-    devices:
-      - /dev/i2c-1:/dev/i2c-1
-    mem_limit: 256m
+  # p1_daq:
+  #   image: gasiepgodoy/moleculer:p1_daq_v1.0.3
+  #   container_name: p1_daq
+  #   ports:
+  #     - "26001:26001"
+  #   environment:
+  #     - NAME=p1_daq
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - I2C_MEM_OPTO_IN_VAL=3
+  #     - I2C_MEM_U0_10_OUT_VAL1=4
+  #     - I2C_MEM_I4_20_OUT_VAL1=12
+  #     - I2C_MEM_OD_PWM1=20
+  #     - I2C_MEM_U0_10_IN_VAL1=28
+  #     - I2C_MEM_I4_20_IN_VAL1=44
+  #     - I2C_RTC_YEAR_ADD=70
+  #     - DEFAULT_HW_ADD=80
+  #     - I2C_MEM_DIAG_TEMPERATURE=114
+  #     - MILLISECONDS=150
+  #     - STACK=0
+  #     - CHANNEL=1
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER=458
+  #     - OPCUA_PORT=26001
+  #   restart: always
+  #   devices:
+  #     - /dev/i2c-1:/dev/i2c-1
+  #   mem_limit: 256m
 
   # Status: pending
-  p2_daq:
-    image: gasiepgodoy/moleculer:p2_daq_v1.0.3
-    container_name: p2_daq
-    ports:
-      - "26002:26002"
-    environment:
-      - NAME=p2_daq
-      - TRANSPORTER=nats://192.168.1.201:4222
-      - I2C_MEM_OPTO_IN_VAL=3
-      - I2C_MEM_U0_10_OUT_VAL1=4
-      - I2C_MEM_I4_20_OUT_VAL1=12
-      - I2C_MEM_OD_PWM1=20
-      - I2C_MEM_U0_10_IN_VAL1=28
-      - I2C_MEM_I4_20_IN_VAL1=44
-      - I2C_RTC_YEAR_ADD=70
-      - DEFAULT_HW_ADD=80
-      - I2C_MEM_DIAG_TEMPERATURE=114
-      - MILLISECONDS=150
-      - STACK=0
-      - CHANNEL=2
-      - NODE_NAMESPACE=3
-      - NODE_IDENTIFIER=469
-      - OPCUA_PORT=26002
-    restart: always
-    devices:
-      - /dev/i2c-1:/dev/i2c-1
-    mem_limit: 256m
+  # p2_daq:
+  #   image: gasiepgodoy/moleculer:p2_daq_v1.0.3
+  #   container_name: p2_daq
+  #   ports:
+  #     - "26002:26002"
+  #   environment:
+  #     - NAME=p2_daq
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - I2C_MEM_OPTO_IN_VAL=3
+  #     - I2C_MEM_U0_10_OUT_VAL1=4
+  #     - I2C_MEM_I4_20_OUT_VAL1=12
+  #     - I2C_MEM_OD_PWM1=20
+  #     - I2C_MEM_U0_10_IN_VAL1=28
+  #     - I2C_MEM_I4_20_IN_VAL1=44
+  #     - I2C_RTC_YEAR_ADD=70
+  #     - DEFAULT_HW_ADD=80
+  #     - I2C_MEM_DIAG_TEMPERATURE=114
+  #     - MILLISECONDS=150
+  #     - STACK=0
+  #     - CHANNEL=2
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER=469
+  #     - OPCUA_PORT=26002
+  #   restart: always
+  #   devices:
+  #     - /dev/i2c-1:/dev/i2c-1
+  #   mem_limit: 256m
