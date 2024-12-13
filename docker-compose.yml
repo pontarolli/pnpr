@@ -193,53 +193,53 @@ services:
   #   devices:
   #     - /dev/i2c-1:/dev/i2c-1
   #   mem_limit: 20m
-  # fic116_pid4:
-  #   image: gasiepgodoy/moleculer:fic116_pid4_v3.0.0
-  #   container_name: fic116_pid4
-  #   ports:
-  #     - "24116:24116"
-  #   environment:
-  #     - NAME=fic116_pid4
-  #     - TRANSPORTER=nats://192.168.1.201:4222
-  #     - MILLISECONDS=150
-  #     - NODE_NAMESPACE=3
-  #     - NODE_IDENTIFIER_PARAMMETERS=1477
-  #     - NODE_IDENTIFIER_PAYLOAD=1484
-  #     - OPCUA_PORT=24116
-  #   restart: "always"
-  #   mem_limit: 20m
-  # lic125_pid4:
-  #   image: gasiepgodoy/moleculer:lic125_pid4_v3.0.0
-  #   container_name: lic125_pid4
-  #   ports:
-  #     - "24125:24125"
-  #   environment:
-  #     - NAME=lic125_pid4
-  #     - TRANSPORTER=nats://192.168.1.201:4222
-  #     - MILLISECONDS=150
-  #     - NODE_NAMESPACE=3
-  #     - NODE_IDENTIFIER_PARAMMETERS=1477
-  #     - NODE_IDENTIFIER_PAYLOAD=1484
-  #     - OPCUA_PORT=24125
-  #   restart: "always"
-  #   mem_limit: 20m
-  pic118_pid4:
-    image: gasiepgodoy/moleculer:pic118_pid4_v3.0.2
-    container_name: pic118_pid4
+  fic116_pid4:
+    image: gasiepgodoy/moleculer:fic116_pid4_v3.0.3
+    container_name: fic116_pid4
     ports:
-      - "24118:24118"
+      - "24116:24116"
     environment:
-      - NAME=pic118_pid4
+      - NAME=fic116_pid4
       - TRANSPORTER=nats://192.168.1.201:4222
       - MILLISECONDS=150
       - NODE_NAMESPACE=3
       - NODE_IDENTIFIER_PARAMETERS=1477
       - NODE_IDENTIFIER_PAYLOAD=1484
-      - OPCUA_PORT=24118
+      - OPCUA_PORT=24116
     restart: "always"
     mem_limit: 20m
+  lic125_pid4:
+    image: gasiepgodoy/moleculer:lic125_pid4_v3.0.3
+    container_name: lic125_pid4
+    ports:
+      - "24125:24125"
+    environment:
+      - NAME=lic125_pid4
+      - TRANSPORTER=nats://192.168.1.201:4222
+      - MILLISECONDS=150
+      - NODE_NAMESPACE=3
+      - NODE_IDENTIFIER_PARAMETERS=1477
+      - NODE_IDENTIFIER_PAYLOAD=1484
+      - OPCUA_PORT=24125
+    restart: "always"
+    mem_limit: 20m
+  # pic118_pid4:
+  #   image: gasiepgodoy/moleculer:pic118_pid4_v3.0.2
+  #   container_name: pic118_pid4
+  #   ports:
+  #     - "24118:24118"
+  #   environment:
+  #     - NAME=pic118_pid4
+  #     - TRANSPORTER=nats://192.168.1.201:4222
+  #     - MILLISECONDS=150
+  #     - NODE_NAMESPACE=3
+  #     - NODE_IDENTIFIER_PARAMETERS=1477
+  #     - NODE_IDENTIFIER_PAYLOAD=1484
+  #     - OPCUA_PORT=24118
+  #   restart: "always"
+  #   mem_limit: 20m
   # pic129_pid4:
-  #   image: gasiepgodoy/moleculer:pic129_pid4_v3.0.0
+  #   image: gasiepgodoy/moleculer:pic129_pid4_v3.0.3
   #   container_name: pic129_pid4
   #   ports:
   #     - "24129:24129"
@@ -248,7 +248,7 @@ services:
   #     - TRANSPORTER=nats://192.168.1.201:4222
   #     - MILLISECONDS=150
   #     - NODE_NAMESPACE=3
-  #     - NODE_IDENTIFIER_PARAMMETERS=1477
+  #     - NODE_IDENTIFIER_PARAMETERS=1477
   #     - NODE_IDENTIFIER_PAYLOAD=1484
   #     - OPCUA_PORT=24129
   #   restart: "always"
